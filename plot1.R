@@ -8,16 +8,6 @@
 datafile <- 'household_power_consumption.txt'
 plotfile <- 'plot1.png'
 
-# Download and unzip the data
-zipfile <- 'household_power_consumption.zip'
-if(!file.exists('household_power_consumption.zip')){    
-    fileURL<-'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
-    download.file(url = fileURL, 
-                  destfile = zipfile,
-                  method = 'curl')
-    unzip(zipfile)
-}
-
 # Read the data
 electricity <- read.csv(datafile,
                         header=FALSE, sep = ";",
